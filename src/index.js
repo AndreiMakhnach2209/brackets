@@ -1,5 +1,4 @@
-// module.exports = 
-function check(str, bracketsConfig) {
+module.exports = function check(str, bracketsConfig) {
   // your solution
   const brackets = {
     open : [],
@@ -39,8 +38,8 @@ function check(str, bracketsConfig) {
 // const config4 = [['|', '|']];
 // const config5 = [['(', ')'], ['|', '|']];
 // const config6 = [['1', '2'], ['3', '4'], ['5', '6'], ['7', '7'], ['8', '8']];
-const config7 = [['(', ')'], ['[', ']'], ['{', '}'], ['|', '|']];
+// const config7 = [['(', ')'], ['[', ']'], ['{', '}'], ['|', '|']];
 
-console.log(check('([[[[(({{{}}}(([](((((((())))||||||))))[[{{|{{}}|}}[[[[]]]]{{{{{}}}}}]]))))]]]]))()', config7));
+// console.log(check('([[[[(({{{}}}(([](((((((())))||||||))))[[{{|{{}}|}}[[[[]]]]{{{{{}}}}}]]))))]]]]))()', config7));
 // console.log(check('5555512575557777777555566667888888667661133833448441111222233333444442266666', config6));
 // console.log(check('111115611111111222288888822225577877778775555666677777777776622222', config6));
