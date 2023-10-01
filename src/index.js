@@ -18,6 +18,7 @@ module.exports = function check(str, bracketsConfig) {
       if (item === stack[stack.length - 1] && brackets.close[item] === item) stack.pop()
       else stack.push(item);
     }else{
+      if (!stack.length) return false;
       if (brackets.close[item]) {
         if (stack.length) {
           if (brackets.close[item] === stack[stack.length - 1]) stack.pop();
