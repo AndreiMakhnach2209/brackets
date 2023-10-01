@@ -12,14 +12,14 @@ module.exports = function check(str, bracketsConfig) {
 
   const strArr = str.split('');
   let stack = [];
+  console.log(brackets)
 
   strArr.forEach(item => {
     if (brackets.open.includes(item)) {
       if (item === stack[stack.length - 1] && brackets.close[item] === item) stack.pop()
       else stack.push(item);
     }else{
-      if (!stack.length) return false;
-      if (brackets.close[item]) {
+      if ((brackets.close[item]) && !(brackets.close[item] === item)) {
         if (stack.length) {
           if (brackets.close[item] === stack[stack.length - 1]) stack.pop();
           else return false;
