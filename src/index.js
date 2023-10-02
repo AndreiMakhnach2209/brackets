@@ -1,5 +1,4 @@
-// module.exports = 
-function check(str, bracketsConfig) {
+module.exports = function check(str, bracketsConfig) {
   // your solution
   const brackets = {
     open : [],
@@ -21,11 +20,10 @@ function check(str, bracketsConfig) {
     }else{
       if (brackets.open.includes(item)) stack.push(item);
       else {
-        if (brackets.close[item] === stack[stack.length - 1] && stack.length > 0) {
+        if (brackets.close[item] === stack[stack.length - 1] && stack.length) {
           stack.pop();
         }else{
          return false;
-         console.log(stack.length)
         }
       }
     }
